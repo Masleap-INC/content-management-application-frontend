@@ -1,9 +1,21 @@
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import OrganizationLoginPage from './pages/OrganizationLoginPage';
+import ActivitiesPage from './pages/ActivitiesPage';
 
 function App() {
   return (
-    <div className="App text-red-600 text-5xl font-bold">
-      hello world
+    <div className="App ">
+      <BrowserRouter>
+      
+        <Routes>
+
+          <Route path = "/" element = {<ActivitiesPage />} />
+          <Route path = "/org-login" element = {<OrganizationLoginPage />} />
+
+        </Routes>
+      
+      </BrowserRouter>
     </div>
   );
 }
