@@ -49,7 +49,7 @@ const OrganizationLoginPage = () => {
 
                         <label htmlFor="role" className=" block text-white text-left text-2xl mb-3">SELECT ROLE</label>
 
-                        <select name="role" id="role" className=" block text-xl px-3 py-2 w-full rounded-2xl outline-none mb-10 ">
+                        <select name="role" id="role" className=" block text-xl px-5 py-2 w-full rounded-2xl outline-none mb-10">
 
                             <option value="admin">ADMIN</option>
                             <option value="team">TEAM MEMBER</option>
@@ -59,7 +59,7 @@ const OrganizationLoginPage = () => {
 
                         {/* Login Button */}
 
-                        <button type="" className="block bg-[#9631FB] hover:bg-[#319AFB] text-white text-2xl px-5 py-3 w-1/2 rounded-2xl mx-auto mb-10">LOGIN</button>
+                        <button type="" className="block bg-transparent border-2 border-white hover:bg-[#319AFB] hover:border-transparent text-white text-2xl px-5 py-3 w-1/2 rounded-2xl duration-300 mx-auto mb-10">LOGIN</button>
 
                     </form>
 
