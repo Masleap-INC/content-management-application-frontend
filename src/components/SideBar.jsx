@@ -77,7 +77,7 @@ const SideBar = () => {
                 </li>
 
                 <li className="w-fit pb-2 mb-5 hover:border-b-2 duration-100">
-                  <NavLink to="/org-login">
+                  <NavLink to="/profile">
                     <img
                       src="https://img.icons8.com/ios/40/ffffff/user-male-circle.png"
                       alt="profile-icon"

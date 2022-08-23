@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import OrganizationLoginPage from './pages/OrganizationLoginPage';
 import ActivitiesPage from './pages/ActivitiesPage';
 import ClientAuthPage from './pages/ClientAuthPage';
+import ProfilePage from './pages/ProfilePage';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Routes>
 
           <Route path = "/" element = {<ActivitiesPage />} />
+          <Route path='/profile' element = {<ProfilePage />} />
           <Route path = "/org-login" element = {<OrganizationLoginPage />} />
           <Route path = "/client-auth" element = {<ClientAuthPage />} />
 
