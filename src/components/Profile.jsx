@@ -7,7 +7,7 @@ const Profile = () => {
         <div className="w-full pt-10 pb-20">
             {/* Heading */}
 
-            <div className="block mb-20">
+            <div className="block mb-10">
                 <div className="pb-5 border-b-2 border-[#9631FB] w-fit">
                     <h1 className="text-left text-5xl text-transparent bg-clip-text bg-gradient-to-br from-[#9631FB] to-[#319AFB]">PROFILE</h1>
                 </div>
@@ -20,7 +20,7 @@ const Profile = () => {
 
                     {/* Image Update */}
 
-                    <div className=" lg:col-span-1 w-fit mx-auto pb-20 ">
+                    <div className=" lg:col-span-1 w-fit mx-auto pt-10 pb-20 ">
 
                         {/* Profile Image */}
 
@@ -85,7 +85,7 @@ const Profile = () => {
 
                     <div className=" lg:col-span-2 ">
 
-                        <div className="lg:w-2/3 md:w-5/6 sm:w-5/6 mx-auto ">
+                        <div className="lg:w-2/3 md:w-5/6 sm:w-5/6 mx-auto p-10 bg-white drop-shadow-2xl rounded-xl">
 
                             {/* Heading */}
 
