@@ -4,6 +4,7 @@ import OrganizationLoginPage from './pages/OrganizationLoginPage';
 import ActivitiesPage from './pages/ActivitiesPage';
 import ClientAuthPage from './pages/ClientAuthPage';
 import ProfilePage from './pages/ProfilePage';
+import ProjectsPage from './pages/ProjectsPage';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
           <Route path = "/" element = {<ActivitiesPage />} />
           <Route path='/profile' element = {<ProfilePage />} />
+          <Route path='/projects' element = {<ProjectsPage />} />
           <Route path = "/org-login" element = {<OrganizationLoginPage />} />
           <Route path = "/client-auth" element = {<ClientAuthPage />} />
 
