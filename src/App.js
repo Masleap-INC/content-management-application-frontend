@@ -6,6 +6,7 @@ import ClientAuthPage from './pages/ClientAuthPage';
 import ProfilePage from './pages/ProfilePage';
 import ProjectsPage from './pages/ProjectsPage';
 
+
 function App() {
   return (
     <div className="App ">

@@ -1,19 +1,36 @@
 
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 
-const NewProjectModal = () => {
+
+
+const NewProjectModal = ({isOpenNewProjectModal}) => {
+
+    const ITEM_HEIGHT = 48;
+    const ITEM_PADDING_TOP = 8;
+    const MenuProps = {
+    PaperProps: {
+            style: {
+            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
+            width: 250,
+            },
+        },
+    };
+
+
     return (
-        <div className="p-10 overflow-y-auto">
+        <div className="lg:p-10 md:p-10 sm:p-5 overflow-y-auto h-full">
 
             {/* Close Button */}
 
             <div className="block -fit float-right pl-5">
-                <button className="text-5xl px-2 py-1 border-2 text-[#9631FB]">X</button>
+                <button onClick={() => isOpenNewProjectModal(false) } className="text-5xl sm:text-3xl px-2 py-1 border-2 text-transparent bg-clip-text bg-gradient-to-br from-[#9631FB] to-[#319AFB] font-bold ">X</button>
             </div>
 
 
             {/* Heading */}
 
-            <div className="block mb-10 w-fit mx-auto">
+            <div className="block mb-10 lg:w-fit lg:mx-auto">
                 <h2 className="text-4xl text-transparent bg-clip-text bg-gradient-to-br from-[#9631FB] to-[#319AFB] font-semibold">CREATE NEW PROJECT</h2>
             </div>
 
@@ -62,21 +79,25 @@ const NewProjectModal = () => {
                     <div>
                         <label htmlFor="project-name" className="block w-full text-[#9631FB] text-left text-2xl mb-3">CLIENT</label>
 
-                        <div className="bg-gradient-to-br from-[#9631FB] to-[#319AFB] p-[1px] shadow-lg w-full mb-10 rounded-2xl">
-                            <select
-                                name="project-client"
-                                id="project-client"
-                                className="bg-white px-3 py-2 placeholder:text-gray-400 w-full rounded-2xl"
-                            >
-                            
-
-                                <option value="client-1">client-1</option>
-
-                                <option value="client-2">client-2</option>
-
-                                <option value="client-3">client-3</option>
-
-                            </select>
+                        <div className="bg-gradient-to-br from-[#9631FB] to-[#319AFB] p-[1px] shadow-lg w-full mb-10 ">
+                            <Select type="text" MenuProps={MenuProps} menuPlacement="auto" classNamePrefix="react-select" className=" bg-white single-select h-10 block px-3 py-2 text-xl border-[#319AFB] w-[100%]">
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                                <MenuItem value="Any IT Solution">Any IT Solution</MenuItem>
+                            </Select>
                         </div>
                     </div>
 
@@ -88,7 +109,7 @@ const NewProjectModal = () => {
                         {/* Cancel Button */}
 
                         <div className=" w-fit mx-auto">
-                            <button className="px-7 py-2 bg-transparent border-2 border-[#9631FB] text-[#9631FB] text-2xl rounded-full hover:bg-[#9631FB] hover:text-white duration-300">CANCEL</button>
+                            <button onClick={() => isOpenNewProjectModal(false) } className="px-7 py-2 bg-transparent border-2 border-[#9631FB] text-[#9631FB] text-2xl rounded-full hover:bg-[#9631FB] hover:text-white duration-300">CANCEL</button>
                         </div>
 
                         {/* Create Button */}
