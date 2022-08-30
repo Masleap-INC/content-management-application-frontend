@@ -100,13 +100,14 @@ const Projects = () => {
             {/* Search Box */}
 
             <div className="mb-20">
-                <div className="lg:w-1/3 md:w-1/2 sm:w-5/6 mx-auto grid grid-cols-4 bg-gray-50 py-2 px-3 rounded-full drop-shadow-xl">
+                <div className="lg:w-1/3 md:w-1/2 sm:w-5/6 mx-auto grid grid-cols-4 bg-gray-50 py-2 px-3 rounded-full shadow-[0_1px_20px_1px_rgba(0,0,0,0.1)]">
                     {/* Search Input */}
 
                     <div className="col-span-3">
                         <input
                             type="text"
-                            className="px-3 bg-gray-50 w-full border-0  border-r-gray-300 border-r-2 focus:border-transparent focus:border-r-gray-300 focus:ring-0 "
+                            placeholder="Search Projects"
+                            className="px-3 bg-gray-50 w-full border-0  border-r-gray-300 border-r-2 focus:border-transparent focus:border-r-gray-300 focus:ring-0 placeholder:text-[#9631FB]"
                         />
                     </div>
 

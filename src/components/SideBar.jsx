@@ -99,7 +99,7 @@ const SideBar = () => {
                 </li>
 
                 <li className="w-fit pb-2 mb-5 hover:border-b-2 duration-100">
-                  <NavLink to="/">
+                  <NavLink to="/clients">
                     <img
                       src="https://img.icons8.com/ios/40/ffffff/client-management.png"
                       alt="clients-icon"
