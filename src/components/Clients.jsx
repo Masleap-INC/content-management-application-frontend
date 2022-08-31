@@ -1,7 +1,7 @@
-import NewProjectModal from "./NewProjectModal";
+import NewClientModal from "./NewClientModal";
 import Modal from "react-modal";
 import { useState } from "react";
-import ProjectModal from "./ProjectModal";
+import ClientModal from "./ClientModal";
 
 Modal.setAppElement("#root");
 
@@ -10,25 +10,26 @@ const Clients = () => {
     const isAdmin = true;
 
 
-    const [newProjectModalIsOpen, setNewProjectModalIsOpen] = useState(false);
+    const [newClientModalIsOpen, setNewClientModalIsOpen] = useState(false);
 
-    const [projectModalIsOpen, setProjectModalIsOpen] = useState(false);
+    const [clientModalIsOpen, setClientModalIsOpen] = useState(false);
 
     return (
         <div className=" w-full pt-10 pb-20 ">
             {/* Modals */}
 
             <div className="">
-                {/* Create New Project Modal */}
+                {/* Create New Client Modal */}
 
                 <Modal
-                    isOpen={newProjectModalIsOpen}
-                    onRequestClose={() => setNewProjectModalIsOpen(false)}
-                    className=" lg:ml-[25%] lg:mr-[5%] md:mx-auto sm:mx-auto lg:w-2/3 md:w-2/3 sm:w-5/6 mt-16 rounded-2xl outline-none"
+                    isOpen={newClientModalIsOpen}
+                    onRequestClose={() => setNewClientModalIsOpen(false)}
+                    className=" lg:ml-[25%] lg:mr-[5%] md:mx-auto sm:mx-auto lg:w-2/3 md:w-2/3 sm:w-5/6 my-16 rounded-2xl outline-none"
                     style={{
                         overlay: {
                             backgroundColor: "rgba(60, 60, 60, 0.5)",
                             zIndex: 1000,
+                            overflowY: "auto",
                         },
 
                         content: {
@@ -37,20 +38,20 @@ const Clients = () => {
                         },
                     }}
                 >
-                    <NewProjectModal isOpenNewProjectModal={setNewProjectModalIsOpen} />
+                    <NewClientModal isOpenNewClientModal={setNewClientModalIsOpen} />
                 </Modal>
 
-                {/* Project Modal */}
+                {/* Client Modal */}
 
                 <Modal
-                    isOpen={projectModalIsOpen}
-                    onRequestClose={() => setProjectModalIsOpen(false)}
+                    isOpen={clientModalIsOpen}
+                    onRequestClose={() => setClientModalIsOpen(false)}
                     className=" lg:ml-[25%] lg:mr-[5%] md:mx-auto sm:mx-auto lg:w-2/3 md:w-2/3 sm:w-5/6 mt-16 mb-16 rounded-2xl outline-none "
                     style={{
                         overlay: {
                             backgroundColor: "rgba(60, 60, 60, 0.5)",
                             zIndex: 1000,
-                            overflowY: "scroll",
+                            overflowY: "auto",
                         },
 
                         
@@ -61,7 +62,7 @@ const Clients = () => {
                         },
                     }}
                 >
-                    <ProjectModal isOpenProjectModal={setProjectModalIsOpen} isAdmin = {isAdmin} />
+                    <ClientModal isOpenClientModal={setClientModalIsOpen} />
                 </Modal>
             </div>
 
@@ -82,7 +83,7 @@ const Clients = () => {
                     <div className="col-span-1 h-fit my-auto w-fit mx-auto">
 
                         <button
-                            onClick={() => setNewProjectModalIsOpen(true)}
+                            onClick={() => setNewClientModalIsOpen(true)}
                             className=" px-3 py-2 border-2 border-[#9631FB] text-[#9631FB] rounded-full hover:bg-[#9631FB] hover:text-white duration-300"
                         >
                             CREATE NEW CLIENT
@@ -106,7 +107,7 @@ const Clients = () => {
                     <div className="col-span-3">
                         <input
                             type="text"
-                            Placeholder="Search Clients"
+                            placeholder="Search Clients"
                             className="px-3 bg-gray-50 w-full border-0  border-r-gray-300 border-r-2 focus:border-transparent focus:border-r-gray-300 focus:ring-0 placeholder:text-[#9631FB] "
                         />
                     </div>
@@ -128,7 +129,7 @@ const Clients = () => {
 
                     {/* Client 1 */}
 
-                    <div onClick={() => setProjectModalIsOpen(true)} className="w-full">
+                    <div onClick={() => setClientModalIsOpen(true)} className="w-full">
 
                         <div className=" p-3 rounded-xl shadow-[0_1px_20px_1px_rgba(0,0,0,0.1)] hover:scale-105 duration-200">
                             
@@ -170,7 +171,7 @@ const Clients = () => {
 
                     {/* Client 2 */}
 
-                    <div onClick={() => setProjectModalIsOpen(true)} className="w-full">
+                    <div onClick={() => setClientModalIsOpen(true)} className="w-full">
 
                         <div className=" p-3 rounded-xl shadow-[0_1px_20px_1px_rgba(0,0,0,0.1)] hover:scale-105 duration-200">
                             
@@ -212,7 +213,7 @@ const Clients = () => {
 
                     {/* Client 3 */}
 
-                    <div onClick={() => setProjectModalIsOpen(true)} className="w-full">
+                    <div onClick={() => setClientModalIsOpen(true)} className="w-full">
 
                         <div className=" p-3 rounded-xl shadow-[0_1px_20px_1px_rgba(0,0,0,0.1)] hover:scale-105 duration-200">
                             
@@ -254,7 +255,7 @@ const Clients = () => {
 
                     {/* Client 4 */}
 
-                    <div onClick={() => setProjectModalIsOpen(true)} className="w-full">
+                    <div onClick={() => setClientModalIsOpen(true)} className="w-full">
 
                         <div className=" p-3 rounded-xl shadow-[0_1px_20px_1px_rgba(0,0,0,0.1)] hover:scale-105 duration-200">
                             
@@ -296,7 +297,7 @@ const Clients = () => {
 
                     {/* Client 5 */}
 
-                    <div onClick={() => setProjectModalIsOpen(true)} className="w-full">
+                    <div onClick={() => setClientModalIsOpen(true)} className="w-full">
 
                         <div className=" p-3 rounded-xl shadow-[0_1px_20px_1px_rgba(0,0,0,0.1)] hover:scale-105 duration-200">
                             
