@@ -29,6 +29,7 @@ const Projects = () => {
                         overlay: {
                             backgroundColor: "rgba(60, 60, 60, 0.5)",
                             zIndex: 1000,
+                            overflowY: "auto",
                         },
 
                         content: {
@@ -50,7 +51,7 @@ const Projects = () => {
                         overlay: {
                             backgroundColor: "rgba(60, 60, 60, 0.5)",
                             zIndex: 1000,
-                            overflowY: "scroll",
+                            overflowY: "auto",
                         },
 
                         

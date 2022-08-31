@@ -104,17 +104,17 @@ const NewProjectModal = ({isOpenNewProjectModal}) => {
 
                     {/* Action Buttons */}
 
-                    <div className="grid grid-cols-2 gap-10 mb-10">
+                    <div className=" w-fit mx-auto my-10">
 
                         {/* Cancel Button */}
 
-                        <div className=" w-fit mx-auto">
+                        <div className="inline-block mr-10">
                             <button onClick={() => isOpenNewProjectModal(false) } className="px-7 py-2 bg-transparent border-2 border-[#9631FB] text-[#9631FB] text-2xl rounded-full hover:bg-[#9631FB] hover:text-white duration-300">CANCEL</button>
                         </div>
 
                         {/* Create Button */}
 
-                        <div className=" w-fit mx-auto">
+                        <div className="inline-block">
                             <button className="px-7 py-2 bg-[#319AFB] border-2 border-[#319AFB] text-white text-2xl rounded-full hover:bg-transparent hover:text-[#319AFB] duration-300">CREATE</button>
                         </div>
 
