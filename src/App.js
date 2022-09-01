@@ -6,6 +6,7 @@ import ClientAuthPage from './pages/ClientAuthPage';
 import ProfilePage from './pages/ProfilePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ClientsPage from './pages/ClientsPage';
+import ResetPasswordPage from './pages/ResetPasswordPage';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path='/clients' element = {<ClientsPage/>} />
           <Route path = "/org-login" element = {<OrganizationLoginPage />} />
           <Route path = "/client-auth" element = {<ClientAuthPage />} />
+          <Route path = "/reset-pass" element = {<ResetPasswordPage />} />
 
         </Routes>
       
