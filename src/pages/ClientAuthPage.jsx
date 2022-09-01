@@ -2,15 +2,21 @@ import logo from "../assets/img/masleap-logo.png";
 import ClientLogin from "../components/ClientLogin";
 import { useState } from "react";
 import ClientRegister from "../components/ClientRegister";
+import ClientForgetPassword from "../components/ClientForgetPassword";
 
 
 const ClientAuthPage = () => {
 
+
     const [hasAccount, sethasAccount] = useState(true);
+
+    const [forgotPassword, setforgotPassword] = useState(false);
 
     const switchForm = () => {
 
         sethasAccount(!hasAccount);
+
+        setforgotPassword(false);
 
     };
 
@@ -33,13 +39,13 @@ const ClientAuthPage = () => {
 
             {/* Welcome Note */}
 
-            <div className="h-full my-auto overflow-x-hidden overflow-y-hidden lg:mt-10">
+            <div className="h-full my-auto align-middle overflow-x-hidden overflow-y-hidden lg:mt-10">
 
                 {/* Heading */}
 
-                <div className="mb-14 ">
+                <div className=" align-middle">
 
-                    <h2 className="text-5xl text-white text-left font-semibold lg:w-1/2 lg:pb-20 md:pb-20 sm:pb-20">LOGIN / SIGN UP TO GET ACCESS TO YOUR ACCOUNT !</h2>
+                    <h2 className="text-5xl text-white text-left font-semibold lg:w-2/3 lg:pb-20 md:pb-20 sm:pb-20">LOGIN / SIGN UP TO GET ACCESS TO YOUR ACCOUNT !</h2>
 
                     {/* Login / Register switch */}
 
@@ -47,7 +53,7 @@ const ClientAuthPage = () => {
 
                         <h2 className="text-2xl text-white text-left font-medium mb-10">DON'T HAVE AN ACCOUNT ?</h2>
 
-                        <button onClick={() => switchForm()} className="bg-transparent text-white border-2 border-white duration-300 hover:border-transparent hover:bg-white hover:text-blue-500 text-xl px-5 py-2 w-full rounded-2xl mb-10">REGISTER</button>
+                        <button onClick={() => {switchForm()}} className="bg-transparent text-white border-2 border-white duration-300 hover:border-transparent hover:bg-white hover:text-blue-500 text-xl px-5 py-2 w-full rounded-2xl mb-10">REGISTER</button>
 
                     </div>
 
@@ -56,7 +62,7 @@ const ClientAuthPage = () => {
 
                         <h2 className="text-2xl text-white text-left font-medium mb-10">ALREADY HAVE AN ACCOUNT ?</h2>
 
-                        <button onClick={() => switchForm()} className="bg-transparent text-white border-2 border-white duration-300 hover:border-transparent hover:bg-white hover:text-blue-500 text-xl px-5 py-2 w-full rounded-2xl mb-10">LOGIN</button>
+                        <button onClick={() => {switchForm()}} className="bg-transparent text-white border-2 border-white duration-300 hover:border-transparent hover:bg-white hover:text-blue-500 text-xl px-5 py-2 w-full rounded-2xl mb-10">LOGIN</button>
 
                     </div>
 
@@ -71,12 +77,16 @@ const ClientAuthPage = () => {
 
                 <div className="">
 
-                  <div className={"w-full " + (hasAccount ? " translate-x-0 duration-500" : " translate-x-[1000px] duration-500 w-fit h-0")}>
-                      <ClientLogin />
+                  <div className={"w-full " + (hasAccount && !forgotPassword ? " translate-x-0 duration-500" : " translate-x-[1000px] duration-500 h-0")}>
+                      <ClientLogin  passwordForgot= {setforgotPassword} />
                   </div>
 
-                  <div className={"w-full" + (hasAccount ? " translate-x-[1000px] duration-500 h-0" : " -translate-x-0 duration-500")}>
+                  <div className={"w-full" + (hasAccount || forgotPassword ? " translate-x-[1000px] duration-500 h-0 " : " translate-x-0 duration-500")}>
                       <ClientRegister />
+                  </div>
+
+                  <div className={"w-full" + (hasAccount && forgotPassword ? " translate-x-0 duration-500" : " translate-x-[1000px] duration-500 h-0")}>
+                      <ClientForgetPassword passwordForgot= {setforgotPassword} />
                   </div>
 
                 </div>

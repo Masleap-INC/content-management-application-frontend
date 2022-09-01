@@ -1,6 +1,7 @@
 
 
-const ClientLogin = () => {
+
+const ClientLogin = ({passwordForgot}) => {
 
     return (
 
@@ -43,16 +44,16 @@ const ClientLogin = () => {
                         <button className="block bg-[#9631FB]  hover:bg-[#319AFB]  text-white text-2xl px-5 py-3 w-1/2 rounded-2xl duration-300 mx-auto mb-10">LOGIN</button>
                     </div>
 
-
-                    {/* Forgot Password */}
-
-                    <div className="mt-10">
-
-                        <button className="text-[#9631FB] text-xl hover:underline text-center">FORGOT PASSWORD ?</button>
-
-                    </div>
-
                 </form>
+
+
+                {/* Forgot Password */}
+
+                <div className="mt-10">
+
+                    <button onClick={() => {passwordForgot(true)}} className="text-[#9631FB] text-xl hover:underline text-center">FORGOT PASSWORD ?</button>
+
+                </div>
 
             </div>
 
