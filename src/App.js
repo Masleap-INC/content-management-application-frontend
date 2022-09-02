@@ -7,6 +7,7 @@ import ProfilePage from './pages/ProfilePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ClientsPage from './pages/ClientsPage';
 import ResetPasswordPage from './pages/ResetPasswordPage';
+import TeamMembersPage from './pages/TeamMembersPage';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/profile' element = {<ProfilePage />} />
           <Route path='/projects' element = {<ProjectsPage />} />
           <Route path='/clients' element = {<ClientsPage/>} />
+          <Route path="/team-members" element = {<TeamMembersPage />} />
           <Route path = "/org-login" element = {<OrganizationLoginPage />} />
           <Route path = "/client-auth" element = {<ClientAuthPage />} />
           <Route path = "/reset-pass" element = {<ResetPasswordPage />} />
